@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="Yeshaswi Singh - Full Stack Developer specializing in web development, UI/UX design, and cybersecurity. View my portfolio, projects, and experience.">
   <meta property="og:title" content="Yeshaswi Singh | Full Stack Developer">
   <meta property="og:description" content="Full Stack Developer specializing in web development, UI/UX design, and cybersecurity">
@@ -13,30 +13,46 @@
 </head>
 <body>
   <header class="hero">
-    <div class="container">
+    <nav class="navbar">
+      <h1 class="nav-logo">Yeshaswi Singh</h1>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="https://github.com/yeshaswi3060" target="_blank" rel="noopener noreferrer" class="nav-link github-link" title="GitHub Profile">GitHub</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+    <div class="hero-content">
       <div class="profile-image">
         <div class="profile-wrapper">
           <img src="profile-image.jpg" alt="Yeshaswi Singh - Full Stack Developer" class="profile-pic">
           <div class="profile-overlay"></div>
         </div>
       </div>
-      <h1>Yeshaswi Singh</h1>
       <p class="tagline">Full Stack Developer</p>
       <p class="contact"><span aria-label="Email">📧</span> yeshaswi3@gmail.com | <span aria-label="Phone">📞</span> 7982344263</p>
+      <a href="#contact" class="cta-button">Get In Touch</a>
     </div>
   </header>
 
   <main>
-    <section class="about section">
+    <section class="about section" id="about">
       <div class="container">
-        <h2>About Me</h2>
+        <a href="#about"><h2>About Me</h2></a>
         <p>I am a passionate full-stack developer with hands-on experience in web development, UI/UX designing, Angular, React, and core Python. I also possess foundational knowledge of cybersecurity and actively seek opportunities to grow and contribute to impactful tech solutions. I enjoy solving real-world problems through clean, scalable code and collaborating on cross-functional teams to deliver high-impact projects.</p>
       </div>
     </section>
 
-    <section class="skills section">
+    <section class="skills section" id="skills">
       <div class="container">
-        <h2>Skills & Tools</h2>
+        <a href="#skills"><h2>Skills & Tools</h2></a>
         <ul>
           <li>HTML, CSS, JavaScript</li>
           <li>React, Angular</li>
@@ -44,13 +60,14 @@
           <li>UI/UX Design</li>
           <li>Git, GitHub, Figma</li>
           <li>Cybersecurity Basics, API Integration</li>
+          <li>C++</li>
         </ul>
       </div>
     </section>
 
-    <section class="experience section">
+    <section class="experience section" id="experience">
       <div class="container">
-        <h2>Experience</h2>
+        <a href="#experience"><h2>Experience</h2></a>
         <ul>
           <li><strong>Web Developer Intern</strong> – Gully Classes Foundation (2024)<br><span>Developed responsive pages and managed content flow using modern HTML5/CSS3 techniques.</span></li>
           <li><strong>Frontend Developer</strong> – Mango Tree Technology (2024)<br><span>Worked on e-commerce storefronts, optimizing layout and cross-device experience.</span></li>
@@ -59,9 +76,9 @@
       </div>
     </section>
 
-    <section class="projects section">
+    <section class="projects section" id="projects">
       <div class="container">
-        <h2>Projects</h2>
+        <a href="#projects"><h2>Projects</h2></a>
         <div class="project">
           <h3>Employee Monitoring App</h3>
           <p>Developed a cross-platform monitoring app to track employee activity including keystrokes, app usage, and screen time. Used Python and ElectronJS.</p>
@@ -83,13 +100,14 @@
 
     <section class="certifications section">
       <div class="container">
-        <h2>Certifications & Education</h2>
+        <h2>My Certifications</h2>
         <ul>
           <li>Class 12 (Pursuing) – DPS R.K. Puram</li>
           <li>Internship Certifications – Gully Classes Foundation, Mango Tree Technology, Vastu Shikhar</li>
           <li>Cybersecurity Fundamentals – Google</li>
           <li>CS50: Introduction to Computer Science – Harvard University</li>
           <li>Machine Learning – University of Oxford</li>
+          <li>Data Science – IBM</li>
         </ul>
       </div>
     </section>
@@ -114,9 +132,9 @@
       </div>
     </section>
 
-    <section class="contact section">
+    <section class="contact section" id="contact">
       <div class="container">
-        <h2>Contact</h2>
+        <a href="#contact"><h2>Contact</h2></a>
         <p><span aria-label="Location">📍</span> Dwarka Sector 3, Delhi</p>
         <p><span aria-label="Email">📧</span> yeshaswi3@gmail.com</p>
         <p><span aria-label="Phone">📞</span> 7982344263</p>
