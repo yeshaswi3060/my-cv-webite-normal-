@@ -1,5 +1,16 @@
 // script.js
 
+// Preloader functionality
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    setTimeout(() => {
+      preloader.style.opacity = '0';
+      preloader.style.visibility = 'hidden';
+    }, 2400);
+  }
+});
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-link");

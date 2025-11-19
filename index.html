@@ -12,6 +12,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+      </div>
+      <h2 class="preloader-text">yeshaswi.com</h2>
+      <p class="loading-text">Loading</p>
+    </div>
+  </div>
+
   <header class="hero">
     <nav class="navbar">
       <h1 class="nav-logo">Yeshaswi Singh</h1>
@@ -30,15 +44,80 @@
       </div>
     </nav>
     <div class="hero-content">
-      <div class="profile-image">
-        <div class="profile-wrapper">
-          <img src="profile-image.jpg" alt="Yeshaswi Singh - Full Stack Developer" class="profile-pic">
-          <div class="profile-overlay"></div>
+      <!-- Animated Background Elements -->
+      <div class="hero-bg-elements">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="hero-main">
+        <!-- Animated Title -->
+        <div class="hero-title-container">
+          <h1 class="hero-title">
+            <span class="title-word">Hi, I'm</span>
+            <span class="title-highlight">Yeshaswi Singh</span>
+          </h1>
+          <div class="title-underline"></div>
+        </div>
+
+        <!-- Animated Subtitle -->
+        <div class="hero-subtitle-container">
+          <p class="hero-subtitle">
+            <span class="subtitle-text">Full Stack Developer</span>
+            <span class="subtitle-text">UI/UX Designer</span>
+            <span class="subtitle-text">Tech Enthusiast</span>
+          </p>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+          <div class="profile-image">
+            <div class="profile-wrapper">
+              <img src="profile-image.jpg" alt="Yeshaswi Singh - Full Stack Developer" class="profile-pic">
+              <div class="profile-overlay"></div>
+              <div class="profile-border"></div>
+            </div>
+            <div class="profile-shadow"></div>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <p class="hero-description">
+          Building beautiful, responsive web experiences with modern technologies
+        </p>
+
+        <!-- Contact Info with Icons -->
+        <div class="hero-contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <span>yeshaswi3@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <span>7982344263</span>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hero-buttons">
+          <a href="#contact" class="cta-button primary">Get In Touch</a>
+          <a href="#projects" class="cta-button secondary">View My Work</a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+          <span class="scroll-text">Scroll to explore</span>
+          <div class="scroll-arrow">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
-      <p class="tagline">Full Stack Developer</p>
-      <p class="contact"><span aria-label="Email">📧</span> yeshaswi3@gmail.com | <span aria-label="Phone">📞</span> 7982344263</p>
-      <a href="#contact" class="cta-button">Get In Touch</a>
     </div>
   </header>
 
