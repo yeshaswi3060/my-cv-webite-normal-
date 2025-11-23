@@ -1,233 +1,295 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-
-  <meta name="description" content="Yeshaswi Singh - Full Stack Developer specializing in web development, UI/UX design, and cybersecurity. View my portfolio, projects, and experience.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Yeshaswi Singh - Full Stack Developer. Building scalable web applications and intuitive user interfaces.">
   <meta property="og:title" content="Yeshaswi Singh | Full Stack Developer">
-  <meta property="og:description" content="Full Stack Developer specializing in web development, UI/UX design, and cybersecurity">
+  <meta property="og:description"
+    content="Full Stack Developer specializing in web development, UI/UX design, and cybersecurity">
   <meta property="og:type" content="website">
   <title>Yeshaswi Singh | Full Stack Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- Preloader -->
+
+  <!-- Simple, Elegant Preloader -->
   <div class="preloader" id="preloader">
-    <div class="preloader-content">
-      <div class="spinner">
-        <div class="spinner-ring"></div>
-        <div class="spinner-ring"></div>
-        <div class="spinner-ring"></div>
-        <div class="spinner-ring"></div>
-      </div>
-      <h2 class="preloader-text">yeshaswi.com</h2>
-      <p class="loading-text">Loading</p>
-    </div>
+    <div class="loader-line"></div>
   </div>
 
-  <header class="hero">
-    <nav class="navbar">
-      <h1 class="nav-logo">Yeshaswi Singh</h1>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">Yeshaswi.</a>
+
       <ul class="nav-menu">
         <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
         <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
         <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
         <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="https://github.com/yeshaswi3060" target="_blank" rel="noopener noreferrer" class="nav-link github-link" title="GitHub Profile">GitHub</a></li>
       </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </nav>
-    <div class="hero-content">
-      <!-- Animated Background Elements -->
-      <div class="hero-bg-elements">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-        <div class="glow-orb orb-1"></div>
-        <div class="glow-orb orb-2"></div>
-      </div>
 
-      <!-- Main Content -->
-      <div class="hero-main">
-        <!-- Animated Title -->
-        <div class="hero-title-container">
-          <h1 class="hero-title">
-            <span class="title-word">Hi, I'm</span>
-            <span class="title-highlight">Yeshaswi Singh</span>
-          </h1>
-          <div class="title-underline"></div>
-        </div>
-
-        <!-- Animated Subtitle -->
-        <div class="hero-subtitle-container">
-          <p class="hero-subtitle">
-            <span class="subtitle-text">Full Stack Developer</span>
-            <span class="subtitle-text">UI/UX Designer</span>
-            <span class="subtitle-text">Tech Enthusiast</span>
-          </p>
-        </div>
-
-        <!-- Profile Section -->
-        <div class="profile-section">
-          <div class="profile-image">
-            <div class="profile-wrapper">
-              <img src="profile-image.jpg" alt="Yeshaswi Singh - Full Stack Developer" class="profile-pic">
-              <div class="profile-overlay"></div>
-              <div class="profile-border"></div>
-            </div>
-            <div class="profile-shadow"></div>
-          </div>
-        </div>
-
-        <!-- Description -->
-        <p class="hero-description">
-          Building beautiful, responsive web experiences with modern technologies
-        </p>
-
-        <!-- Contact Info with Icons -->
-        <div class="hero-contact-info">
-          <div class="contact-item">
-            <span class="contact-icon"></span>
-            <span>yeshaswi3@gmail.com</span>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon"></span>
-            <span>7982344263</span>
-          </div>
-        </div>
-
-        <!-- CTA Buttons -->
-        <div class="hero-buttons">
-          <a href="#contact" class="cta-button primary">Get In Touch</a>
-          <a href="#projects" class="cta-button secondary">View My Work</a>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-          <span class="scroll-text">Scroll to explore</span>
-          <div class="scroll-arrow">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+      <div class="nav-actions">
+        <a href="https://github.com/yeshaswi3060" target="_blank" rel="noopener noreferrer" class="btn-icon"
+          aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </div>
     </div>
-  </header>
+  </nav>
 
   <main>
-    <section class="about section" id="about">
-      <div class="container">
-        <a href="#about"><h2>About Me</h2></a>
-        <p>I am a passionate full-stack developer with hands-on experience in web development, UI/UX designing, Angular, React, and core Python. I also possess foundational knowledge of cybersecurity and actively seek opportunities to grow and contribute to impactful tech solutions. I enjoy solving real-world problems through clean, scalable code and collaborating on cross-functional teams to deliver high-impact projects.</p>
-      </div>
-    </section>
-
-    <section class="skills section" id="skills">
-      <div class="container">
-        <a href="#skills"><h2>Skills & Tools</h2></a>
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <li>React, Angular</li>
-          <li>Core Python</li>
-          <li>UI/UX Design</li>
-          <li>Git, GitHub, Figma</li>
-          <li>Cybersecurity Basics, API Integration</li>
-          <li>C++</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="experience section" id="experience">
-      <div class="container">
-        <a href="#experience"><h2>Experience</h2></a>
-        <ul>
-          <li><strong>Web Developer Intern</strong> – Gully Classes Foundation (2024)<br><span>Developed responsive pages and managed content flow using modern HTML5/CSS3 techniques.</span></li>
-          <li><strong>Frontend Developer</strong> – Mango Tree Technology (2024)<br><span>Worked on e-commerce storefronts, optimizing layout and cross-device experience.</span></li>
-          <li><strong>UI/UX Designer</strong> – Vastu Shikhar (2024)<br><span>Built brand-aligned visuals and simplified user navigation flows using Figma and CSS.</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="projects section" id="projects">
-      <div class="container">
-        <a href="#projects"><h2>Projects</h2></a>
-        <div class="project">
-          <h3>Employee Monitoring App</h3>
-          <p>Developed a cross-platform monitoring app to track employee activity including keystrokes, app usage, and screen time. Used Python and ElectronJS.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-greeting">Hello, I'm</span>
+          <h1 class="hero-title">Yeshaswi Singh</h1>
+          <p class="hero-subtitle">Full Stack Developer & UI/UX Designer</p>
+          <p class="hero-description">
+            I craft high-performance digital experiences that merge beautiful design with robust engineering.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View Work</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
         </div>
-        <div class="project">
-          <h3>Gully Classes Foundation Website</h3>
-          <p>Created a responsive, multilingual website with CMS-based updates to highlight their free education initiative. Focused on SEO and accessibility.</p>
-        </div>
-        <div class="project">
-          <h3>Mango Tree Technology E-commerce Site</h3>
-          <p>Implemented a Shopify-based storefront with optimized checkout and mobile-first layout, improving page load by 40%.</p>
-        </div>
-        <div class="project">
-          <h3>Vastu Shikhar</h3>
-          <p>Delivered a clean, elegant design with interactive Vastu tools using vanilla JavaScript and custom CSS animation.</p>
+        <div class="hero-visual">
+          <!-- Abstract minimalist visual or profile image -->
+          <div class="profile-frame">
+            <img src="profile-image.jpg" alt="Yeshaswi Singh" class="profile-img">
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="certifications section">
+    <!-- About Section -->
+    <section id="about" class="section about-section">
       <div class="container">
-        <h2>My Certifications</h2>
-        <ul>
-          <li>Class 12 (Pursuing) – DPS R.K. Puram</li>
-          <li>Internship Certifications – Gully Classes Foundation, Mango Tree Technology, Vastu Shikhar</li>
-          <li>Cybersecurity Fundamentals – Google</li>
-          <li>CS50: Introduction to Computer Science – Harvard University</li>
-          <li>Machine Learning – University of Oxford</li>
-          <li>Data Science – IBM</li>
-        </ul>
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="about-content">
+          <p>
+            I am a passionate <strong>Full Stack Developer</strong> with a keen eye for <strong>UI/UX design</strong>.
+            My journey involves building responsive web applications using modern technologies like React, Angular, and
+            Python.
+            Beyond coding, I have a foundational understanding of cybersecurity, ensuring that the solutions I build are
+            not just beautiful, but secure.
+          </p>
+          <p>
+            I thrive in collaborative environments and am always eager to tackle complex problems with clean, scalable
+            code.
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="testimonials section">
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
       <div class="container">
-        <h2>What Others Say</h2>
-        <p><em>"Yeshaswi is an incredibly talented developer. His dedication and problem-solving ability truly impressed our team."</em> – Mentor, Mango Tree Technology</p>
-        <p><em>"He transformed our website from scratch with professionalism and attention to detail. Highly recommended!"</em> – Director, Gully Classes Foundation</p>
-        <p><em>"A committed and creative team player. Always delivers work ahead of deadline and with a personal touch."</em> – Supervisor, Vastu Shikhar</p>
+        <div class="section-header">
+          <h2 class="section-title">Technical Arsenal</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript (ES6+)</span>
+              <span>React</span>
+              <span>Angular</span>
+              <span>Tailwind</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Backend & Core</h3>
+            <div class="skill-tags">
+              <span>Python</span>
+              <span>C++</span>
+              <span>Node.js</span>
+              <span>API Integration</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Tools & Design</h3>
+            <div class="skill-tags">
+              <span>Git & GitHub</span>
+              <span>Figma</span>
+              <span>UI/UX Principles</span>
+              <span>VS Code</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="awards section">
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
       <div class="container">
-        <h2>Awards & Recognition</h2>
-        <ul>
-          <li>Best Intern of the Month – Mango Tree Technology (June 2024)</li>
-          <li>Top Contributor Award – Gully Classes Foundation (2024)</li>
-          <li>Cyber Awareness Champion – Google Student Club (2023)</li>
-        </ul>
+        <div class="section-header">
+          <h2 class="section-title">Experience</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+              <h3>Web Developer Intern</h3>
+              <span class="company">Gully Classes Foundation</span>
+              <p>Developed responsive web pages and managed content flow using modern HTML5/CSS3 techniques, improving
+                site accessibility.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+              <h3>Frontend Developer</h3>
+              <span class="company">Mango Tree Technology</span>
+              <p>Worked on e-commerce storefronts, optimizing layout and cross-device experience. Enhanced UI
+                performance and responsiveness.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-content">
+              <h3>UI/UX Designer</h3>
+              <span class="company">Vastu Shikhar</span>
+              <p>Built brand-aligned visuals and simplified user navigation flows using Figma and CSS, resulting in
+                increased user engagement.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="contact section" id="contact">
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
       <div class="container">
-        <a href="#contact"><h2>Contact</h2></a>
-        <p><span aria-label="Location">📍</span> Dwarka Sector 3, Delhi</p>
-        <p><span aria-label="Email">📧</span> yeshaswi3@gmail.com</p>
-        <p><span aria-label="Phone">📞</span> 7982344263</p>
-        <p><strong>Let's build something together! I’m open for freelance, internships and full-time opportunities.</strong></p>
+        <div class="section-header">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-content">
+              <h3>Employee Monitoring App</h3>
+              <p class="project-desc">A cross-platform desktop application to track employee activity, keystrokes, and
+                screen time.</p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>ElectronJS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-content">
+              <h3>Gully Classes Website</h3>
+              <p class="project-desc">Responsive, multilingual educational website with CMS integration. Focused on SEO
+                and accessibility.</p>
+              <div class="project-tech">
+                <span>HTML/CSS</span>
+                <span>JS</span>
+                <span>SEO</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-content">
+              <h3>E-commerce Storefront</h3>
+              <p class="project-desc">Shopify-based storefront with optimized checkout flow and mobile-first design.</p>
+              <div class="project-tech">
+                <span>Shopify</span>
+                <span>Liquid</span>
+                <span>CSS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card">
+            <div class="project-content">
+              <h3>Vastu Shikhar</h3>
+              <p class="project-desc">Elegant design with interactive Vastu tools and custom animations.</p>
+              <div class="project-tech">
+                <span>Vanilla JS</span>
+                <span>CSS Animations</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>I'm currently open for freelance projects and full-time opportunities.</p>
+          </div>
+
+          <div class="contact-info">
+            <a href="mailto:yeshaswi3@gmail.com" class="contact-link">
+              <span class="icon">✉️</span> yeshaswi3@gmail.com
+            </a>
+            <a href="tel:7982344263" class="contact-link">
+              <span class="icon">📞</span> 7982344263
+            </a>
+            <div class="contact-location">
+              <span class="icon">📍</span> Dwarka Sector 3, Delhi
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      &copy; 2025 Yeshaswi Singh. All rights reserved.
+    <div class="container footer-container">
+      <p>&copy; 2025 Yeshaswi Singh. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
