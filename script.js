@@ -87,7 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .skill-category.active, 
     .timeline-item.active, 
     .project-card.active, 
-    .contact-wrapper.active {
+    .contact-wrapper.active,
+    .certification-card.active {
       opacity: 1 !important;
       transform: translateY(0) !important;
     }
@@ -116,4 +117,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 5. Certification Modal Functions
+  // Add certification cards to observer
+  const certCards = document.querySelectorAll('.certification-card');
+  certCards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(card);
+  });
+
+});
+
+// Certification Modal Functions (Global scope for onclick attributes)
+function openCertModal(imgId) {
+  const modal = document.getElementById('certificationModal');
+  const modalImg = document.getElementById('modalImage');
+  const img = document.getElementById(imgId);
+
+  if (modal && modalImg && img) {
+    modal.style.display = 'block';
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeCertModal() {
+  const modal = document.getElementById('certificationModal');
+  if (modal) {
+    modal.style.display = 'none';
+    // Restore body scroll
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeCertModal();
+  }
 });
