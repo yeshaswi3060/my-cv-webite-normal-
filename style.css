@@ -875,12 +875,38 @@ footer {
   }
 
   .nav-menu {
-    display: none;
-    /* Mobile menu logic in JS */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(5, 5, 5, 0.98);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    z-index: 999;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 
   .hamburger {
     display: flex;
+    z-index: 1000;
+    /* Ensure hamburger is above the menu overlay */
   }
 
   .hero-container {
@@ -902,6 +928,8 @@ footer {
     height: 280px;
     margin: 0 auto;
     transform: rotate(0deg);
+    max-width: 80vw;
+    max-height: 80vw;
   }
 
   .hero-buttons {
