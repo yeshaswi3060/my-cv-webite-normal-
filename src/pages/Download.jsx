@@ -376,7 +376,7 @@ const Download = () => {
                             <p className="cta-subtitle">Download GOGLY and experience invisible AI assistance</p>
                             <div className="cta-buttons">
                                 <a
-                                    href="https://github.com/yeshaswi3060/interview-cheater/releases/download/v1.0.0/gogly.Setup.1.0.0.exe"
+                                    href="https://drive.usercontent.google.com/download?id=1vb5IC1hHbglRGPaRO8XnqnNvyv90phBs&export=download&authuser=0&confirm=t&uuid=21d9f23d-b796-445a-9232-0f989ac63625&at=ALWLOp5iP-hHO_9oFh_7U2aBCSq9:1765271774403"
                                     className="download-btn-primary"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
