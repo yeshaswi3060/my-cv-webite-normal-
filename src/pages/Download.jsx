@@ -374,20 +374,39 @@ const Download = () => {
                             <span className="cta-label">Get Started</span>
                             <h2 className="cta-title">Ready for Your Hidden AI?</h2>
                             <p className="cta-subtitle">Download GOGLY and experience invisible AI assistance</p>
+                            <div className="cta-buttons">
+                                <a
+                                    href="https://github.com/yeshaswi3060/gogly/releases/latest/download/gogly.Setup.1.0.0.exe"
+                                    className="download-btn-primary"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                        <polyline points="7 10 12 15 17 10" />
+                                        <line x1="12" y1="15" x2="12" y2="3" />
+                                    </svg>
+                                    <span>Download for Windows</span>
+                                </a>
 
-                            <a
-                                href="https://github.com/yeshaswi3060/gogly/releases"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="download-btn-primary"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                                    <polyline points="7 10 12 15 17 10" />
-                                    <line x1="12" y1="15" x2="12" y2="3" />
-                                </svg>
-                                <span>Download for Windows</span>
-                            </a>
+                                <button
+                                    className="copy-url-btn"
+                                    onClick={() => {
+                                        navigator.clipboard.writeText(window.location.href);
+                                        const btn = document.querySelector('.copy-url-btn');
+                                        btn.classList.add('copied');
+                                        btn.querySelector('span').textContent = 'Copied!';
+                                        setTimeout(() => {
+                                            btn.classList.remove('copied');
+                                            btn.querySelector('span').textContent = 'Copy Link';
+                                        }, 2000);
+                                    }}
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                                    </svg>
+                                    <span>Copy Link</span>
+                                </button>
+                            </div>
 
                             <div className="system-requirements">
                                 <div className="requirement">
