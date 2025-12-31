@@ -18,6 +18,27 @@ const Experience = () => {
                         </div>
                     </div>
                 </div>
+                <div className="timeline">
+                    <div className="timeline-item">
+                        <div className="timeline-date">2025</div>
+                        <div className="timeline-content">
+                            <h3>App Developer Intern</h3>
+                            <span className="company">Mango Tree Technology</span>
+                            <p>Developed mobile applications and managed content flow using modern development techniques, improving
+                                user engagement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="timeline">
+                    <div className="timeline-item">
+                        <div className="timeline-date">2024</div>
+                        <div className="timeline-content">
+                            <h3>UI UX Designer</h3>
+                            <span className="company">Vastu Shikhar</span>
+                            <p>Developed user-centered designs and prototypes, improving overall user experience and     accessibility.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );

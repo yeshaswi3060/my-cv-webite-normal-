@@ -8,11 +8,11 @@ const Certifications = () => {
         { id: 'cert2', image: '/Screenshot 2025-11-24 111523.png', name: 'CS50 Harvard' },
         { id: 'cert3', image: '/certification3.jpg', name: 'UI/UX Design Vastu Shikhar' },
         { id: 'cert4', image: '/certification4.jpg', name: 'Frontend Developer-Mango Tree Technology' },
-        { id: 'cert5', image: '/Screenshot 2025-11-26 130524.png', name: 'W3CLx' },
+        { id: 'cert5', image: '/Screenshot 2025-11-26 130524.png', name: 'W3Cx' },
         { id: 'cert6', image: '/Screenshot 2025-11-26 131043.png', name: 'META Frontend Developer' },
         { id: 'cert7', image: '/Screenshot 2025-11-26 133013.png', name: 'FreeCodeCamp Full stack Developer' },
         { id: 'cert9', image: '/image.png', name: 'INTERNSHIP at Connecting For' },
-        { id: 'cert10', image: '/image copy.png', name: 'INTERNSHIP at Connecting For' },
+        { id: 'cert10', image: '/image copy.png', name: 'INTERNSHIP at Gully Classes Foundation ' },
         { id: 'cert8', image: '/Screenshot 2025-11-26 133521.png', name: 'Red Team' },
     ];
 
