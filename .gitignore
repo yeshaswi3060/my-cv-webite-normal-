@@ -25,3 +25,4 @@ dist-ssr
 
 # Large binary files
 *.exe
+.env

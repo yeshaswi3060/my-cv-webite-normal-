@@ -41,6 +41,9 @@ const Navbar = () => {
                         <Link to="/downloads" className={`nav-link ${location.pathname === '/downloads' ? 'active' : ''}`} onClick={closeMenu}>Downloads</Link>
                     </li>
                     <li className="nav-item">
+                        <Link to="/ai-detection" className={`nav-link ${location.pathname === '/ai-detection' ? 'active' : ''}`} onClick={closeMenu}>AI Detector</Link>
+                    </li>
+                    <li className="nav-item">
                         <a href={isHomePage ? "#contact" : "/#contact"} className="nav-link" onClick={closeMenu}>Contact</a>
                     </li>
                 </ul>
