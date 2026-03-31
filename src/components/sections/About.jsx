@@ -8,15 +8,12 @@ const About = () => {
                 </div>
                 <div className="about-content">
                     <p>
-                        I am a passionate <strong>Full Stack Developer</strong> with a keen eye for <strong>UI/UX design</strong>.
-                        My journey involves building responsive web applications using modern technologies like React, Angular, and
-                        Python.
-                        Beyond coding, I have a foundational understanding of cybersecurity, ensuring that the solutions I build are
-                        not just beautiful, but secure.
+                        I am a dedicated <strong>Cyber Security Researcher</strong> and <strong>Ethical Hacker</strong> with a primary focus on <strong>Offensive Security</strong> and <strong>Vulnerability Research</strong>.
+                        My journey involves identifying complex security flaws, conducting deep-dive penetration tests, and developing custom security tools.
+                        With a strong background in full-stack engineering, I bridge the gap between robust development and uncompromising security protocols.
                     </p>
                     <p>
-                        I thrive in collaborative environments and am always eager to tackle complex problems with clean, scalable
-                        code.
+                        I specialize in <strong>Red Teaming</strong> and <strong>Threat Intelligence</strong>, constantly pushing the boundaries of digital defense to uncover and neutralize emerging threats.
                     </p>
                 </div>
             </div>

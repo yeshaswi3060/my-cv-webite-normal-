@@ -6,8 +6,7 @@ const Certifications = () => {
     const certifications = [
         { id: 'cert1', image: '/Screenshot 2025-11-24 110747.png', name: 'OxML OXFORD' },
         { id: 'cert2', image: '/Screenshot 2025-11-24 111523.png', name: 'CS50 Harvard' },
-        { id: 'cert3', image: '/certification3.jpg', name: 'UI/UX Design Vastu Shikhar' },
-        { id: 'cert4', image: '/certification4.jpg', name: 'Frontend Developer-Mango Tree Technology' },
+        { id: 'cert3', image: '/cybersec-cert.jpg', name: 'Certified Ethical Hacker (CEH) - EC-Council' },
         { id: 'cert5', image: '/Screenshot 2025-11-26 130524.png', name: 'W3Cx' },
         { id: 'cert6', image: '/Screenshot 2025-11-26 131043.png', name: 'META Frontend Developer' },
         { id: 'cert7', image: '/Screenshot 2025-11-26 133013.png', name: 'FreeCodeCamp Full stack Developer' },

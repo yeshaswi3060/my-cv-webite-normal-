@@ -6,19 +6,19 @@ const Projects = () => {
             tech: ["Python", "ElectronJS"]
         },
         {
-            title: "Gully Classes Website",
-            description: "Responsive, multilingual educational website with CMS integration. Focused on SEO and accessibility.",
-            tech: ["HTML/CSS", "JS", "SEO"]
+            title: "Interview Environment Simulator",
+            description: "A sandbox environment designed to simulate various technical interview scenarios, allowing users to practice coding in a restricted, monitored setting.",
+            tech: ["Docker", "Node.js", "Virtualization"]
         },
         {
-            title: "E-commerce Storefront",
-            description: "Shopify-based storefront with optimized checkout flow and mobile-first design.",
-            tech: ["Shopify", "Liquid", "CSS"]
+            title: "Fake Punching System",
+            description: "A security auditing tool for simulating attendance and check-in logs, designed for testing the robustness of biometric verification systems.",
+            tech: ["Python", "API Spoofing", "Security"]
         },
         {
-            title: "Vastu Shikhar",
-            description: "Elegant design with interactive Vastu tools and custom animations.",
-            tech: ["Vanilla JS", "CSS Animations"]
+            title: "Interview Cheater App",
+            description: "An AI-powered assistant providing real-time support and technical insights during coding interviews.",
+            tech: ["React", "Node.js", "GPT API"]
         }
     ];
 

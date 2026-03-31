@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Download from './pages/Download';
 import AiDetection from './pages/AiDetection';
+import Monitoring from './pages/Monitoring';
 import { Analytics } from "@vercel/analytics/react"
 import './styles/main.css';
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/downloads" element={<Download />} />
         <Route path="/ai-detection" element={<AiDetection />} />
+        <Route path="/monitoring" element={<Monitoring />} />
       </Routes>
       <Footer />
     </Router>

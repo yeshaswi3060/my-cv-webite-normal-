@@ -9,34 +9,37 @@ const Skills = () => {
 
                 <div className="skills-grid">
                     <div className="skill-category">
-                        <h3>Frontend</h3>
+                        <h3>Offensive Security</h3>
                         <div className="skill-tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript (ES6+)</span>
-                            <span>React</span>
-                            <span>Angular</span>
-                            <span>Tailwind</span>
+                            <span>Kali Linux</span>
+                            <span>Metasploit</span>
+                            <span>Nmap & Wireshark</span>
+                            <span>Burp Suite</span>
+                            <span>Exploit Development</span>
+                            <span>Penetration Testing</span>
                         </div>
                     </div>
 
                     <div className="skill-category">
-                        <h3>Backend & Core</h3>
+                        <h3>Defensive & Core</h3>
                         <div className="skill-tags">
-                            <span>Python</span>
-                            <span>C++</span>
-                            <span>Node.js</span>
-                            <span>API Integration</span>
+                            <span>Threat Modeling</span>
+                            <span>Incident Response</span>
+                            <span>Network Security</span>
+                            <span>Cryptography</span>
+                            <span>Security Auditing</span>
+                            <span>SIEM & SOC</span>
                         </div>
                     </div>
 
                     <div className="skill-category">
-                        <h3>Tools & Design</h3>
+                        <h3>Development & Tools</h3>
                         <div className="skill-tags">
-                            <span>Git & GitHub</span>
-                            <span>Figma</span>
-                            <span>UI/UX Principles</span>
-                            <span>VS Code</span>
+                            <span>Python (Sec Scripting)</span>
+                            <span>Bash & Shell</span>
+                            <span>Reverse Engineering</span>
+                            <span>C++ / ASM</span>
+                            <span>Docker & Git</span>
                         </div>
                     </div>
                 </div>
