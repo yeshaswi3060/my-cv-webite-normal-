@@ -1,9 +1,19 @@
 const Projects = () => {
     const projects = [
         {
+            title: "Modern E-Commerce Platform",
+            description: "A full-stack e-commerce solution featuring a responsive React frontend, a secure Node.js REST API, Stripe payment integration, and a custom admin dashboard.",
+            tech: ["React", "Node.js", "MongoDB", "Stripe"]
+        },
+        {
+            title: "Real-Time AI Assistant",
+            description: "An AI-powered web application providing real-time support and technical insights, utilizing WebSockets for instant communication.",
+            tech: ["React", "Node.js", "GPT API", "WebSockets"]
+        },
+        {
             title: "Employee Monitoring App",
-            description: "A cross-platform desktop application to track employee activity, keystrokes, and screen time.",
-            tech: ["Python", "ElectronJS"]
+            description: "A cross-platform desktop application to track employee activity, keystrokes, and screen time securely.",
+            tech: ["Python", "ElectronJS", "Security"]
         },
         {
             title: "Interview Environment Simulator",
@@ -14,11 +24,6 @@ const Projects = () => {
             title: "Fake Punching System",
             description: "A security auditing tool for simulating attendance and check-in logs, designed for testing the robustness of biometric verification systems.",
             tech: ["Python", "API Spoofing", "Security"]
-        },
-        {
-            title: "Interview Cheater App",
-            description: "An AI-powered assistant providing real-time support and technical insights during coding interviews.",
-            tech: ["React", "Node.js", "GPT API"]
         }
     ];
 

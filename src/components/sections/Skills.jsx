@@ -9,13 +9,36 @@ const Skills = () => {
 
                 <div className="skills-grid">
                     <div className="skill-category">
+                        <h3>Frontend & UI/UX</h3>
+                        <div className="skill-tags">
+                            <span>React.js</span>
+                            <span>HTML5 / CSS3</span>
+                            <span>JavaScript (ES6+)</span>
+                            <span>Tailwind CSS</span>
+                            <span>ElectronJS</span>
+                            <span>Figma & UI Design</span>
+                        </div>
+                    </div>
+
+                    <div className="skill-category">
+                        <h3>Backend & Systems</h3>
+                        <div className="skill-tags">
+                            <span>Node.js / Express</span>
+                            <span>Python & Scripting</span>
+                            <span>RESTful APIs</span>
+                            <span>MongoDB / SQL</span>
+                            <span>Docker</span>
+                            <span>Git & CI/CD</span>
+                        </div>
+                    </div>
+
+                    <div className="skill-category">
                         <h3>Offensive Security</h3>
                         <div className="skill-tags">
                             <span>Kali Linux</span>
                             <span>Metasploit</span>
                             <span>Nmap & Wireshark</span>
                             <span>Burp Suite</span>
-                            <span>Exploit Development</span>
                             <span>Penetration Testing</span>
                         </div>
                     </div>
@@ -28,18 +51,6 @@ const Skills = () => {
                             <span>Network Security</span>
                             <span>Cryptography</span>
                             <span>Security Auditing</span>
-                            <span>SIEM & SOC</span>
-                        </div>
-                    </div>
-
-                    <div className="skill-category">
-                        <h3>Development & Tools</h3>
-                        <div className="skill-tags">
-                            <span>Python (Sec Scripting)</span>
-                            <span>Bash & Shell</span>
-                            <span>Reverse Engineering</span>
-                            <span>C++ / ASM</span>
-                            <span>Docker & Git</span>
                         </div>
                     </div>
                 </div>
