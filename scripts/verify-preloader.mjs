@@ -50,7 +50,11 @@ try {
   });
   await press('Tab');
   check('keyboard focus stays inside the introductory dialog', () => assert.ok(document.activeElement === document.querySelector('.intro-skip')));
-  check('homepage entrance animation is paused while the intro covers it', () => assert.equal(document.querySelector('.portfolio-shell').dataset.introEntering, 'true'));
+  check('homepage animation waits for the intro and the total duration is three seconds', () => {
+    assert.equal(document.querySelector('.portfolio-shell').dataset.introEntering, 'true');
+    assert.equal(timing.minimum + timing.exit, 3000);
+    assert.equal(timing.deadline + timing.exit, 3000);
+  });
   await wait(timing.minimum + 70);
   check('ready assets respect the requested hold before the shutter reveal', () => {
     assert.equal(document.querySelector('.portfolio-intro').dataset.phase, 'exiting');

@@ -1,6 +1,6 @@
 export const INTRO_STORAGE_KEY = 'yeshaswi:portfolio-intro:v1';
-// Five seconds in total: hold the signature for 4.3s, then reveal for 0.7s.
-export const INTRO_TIMING = { minimum: 4300, deadline: 4300, exit: 700 };
+// Three seconds in total: hold the signature for 2.3s, then reveal for 0.7s.
+export const INTRO_TIMING = { minimum: 2300, deadline: 2300, exit: 700 };
 
 export function shouldShowIntroduction() {
   if (typeof window === 'undefined') return false;
