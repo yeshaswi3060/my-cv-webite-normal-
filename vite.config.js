@@ -5,6 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
+    // Verification archives are not source files; watching them can lock the
+    // Windows filesystem while snapshots are being replaced.
+    watch: {
+      ignored: ['**/artifacts/**'],
+    },
     proxy: {
       '/api/nvidia': {
         target: 'https://ai.api.nvidia.com',
