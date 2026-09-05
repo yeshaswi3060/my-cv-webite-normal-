@@ -1,11 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, ArrowUpRight, MoveUpRight } from 'lucide-react';
-import { LearnovaPreview, VatsalyaPreview, SpherePreview } from './ProjectPreviews';
-const projects = [
-  { title: 'Learnova', type: 'EDUCATION PLATFORM', url: 'https://upsc-inky.vercel.app', Preview: LearnovaPreview },
-  { title: 'Vatsalya Boutique', type: 'DIGITAL STOREFRONT', url: 'https://clothing-web-vatsalya.vercel.app', Preview: VatsalyaPreview },
-  { title: 'Sphere', type: 'AUTHENTICATION EXPERIENCE', url: 'https://vastu-sphere.vercel.app', Preview: SpherePreview },
-];
+import ProjectPreview from './ProjectPreviews';
+import { featuredProjects as projects } from '../data/projects';
 export default function ProjectStage() {
   const [selected, setSelected] = useState(0);
   const stageRef = useRef(null);
@@ -60,14 +56,14 @@ export default function ProjectStage() {
   return <div className="project-stage" ref={stageRef} role="region" aria-label="Interactive 3D featured projects" aria-roledescription="carousel" onPointerMove={move} onPointerLeave={leave} onPointerDown={event => { pointerRef.current = { x: event.clientX }; }} onPointerUp={pointerUp} onPointerCancel={() => { pointerRef.current = null; }} onKeyDown={event => { if (event.key === 'ArrowRight') { event.preventDefault(); change(1); } if (event.key === 'ArrowLeft') { event.preventDefault(); change(-1); } }}>
     <div className="stage-label"><span>SELECTED DIGITAL EXPERIENCES</span><span><MoveUpRight size={12} /> MOVE TO EXPLORE</span></div>
     <div className="stage-perspective"><div className="stage-world">
-      {projects.map(({ title, url, Preview }, index) => {
+      {projects.map((project, index) => {
         const position = (index - selected + projects.length) % projects.length;
-        return <div className={`stage-screen stage-position-${position}`} key={title} aria-hidden={position !== 0} inert={position !== 0}>
-          <a href={url} target="_blank" rel="noreferrer" aria-label={`Visit ${title} website`} tabIndex={position === 0 ? 0 : -1}><Preview /><span className="stage-open"><ArrowUpRight size={20} /></span></a>
+        return <div className={`stage-screen stage-position-${position}`} key={project.id} aria-hidden={position !== 0} inert={position !== 0}>
+          <a href={project.live} target="_blank" rel="noreferrer" aria-label={`Visit ${project.title} website`} tabIndex={position === 0 ? 0 : -1}><ProjectPreview project={project} /><span className="stage-open"><ArrowUpRight size={20} /></span></a>
         </div>;
       })}
     </div></div>
-    <div className="stage-controls"><div className="stage-project-name" aria-live="polite"><span>0{selected + 1} / 03</span><strong>{projects[selected].title}</strong></div><div className="stage-buttons"><button onClick={() => change(-1)} aria-label="Previous featured project"><ArrowLeft size={17} /></button><button onClick={() => change(1)} aria-label="Next featured project"><ArrowRight size={17} /></button></div></div>
+    <div className="stage-controls"><div className="stage-project-name" aria-live="polite"><span>0{selected + 1} / 0{projects.length}</span><strong>{projects[selected].title}</strong></div><div className="stage-buttons"><button onClick={() => change(-1)} aria-label="Previous featured project"><ArrowLeft size={17} /></button><button onClick={() => change(1)} aria-label="Next featured project"><ArrowRight size={17} /></button></div></div>
   </div>;
 }
 

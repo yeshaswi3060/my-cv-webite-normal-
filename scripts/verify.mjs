@@ -62,24 +62,29 @@ try {
     const hrefs = [...document.querySelectorAll('a')].map(a => a.href);
     for (const name of expected) assert.ok(hrefs.includes(`https://github.com/yeshaswi3060/${name}`));
   });
+  check('all four user-supplied websites are featured with exact destinations', () => {
+    assert.equal(document.querySelectorAll('.work-card').length, 4);
+    const hrefs = [...document.querySelectorAll('.project-preview-link')].map(link => link.href);
+    for (const url of ['https://palora-eight.vercel.app/', 'https://vastushikhar.com/', 'https://malyam.com/', 'https://allcloths.com/']) assert.ok(hrefs.includes(url));
+  });
   const stage = document.querySelector('.project-stage');
   const title = () => document.querySelector('.stage-project-name strong').textContent;
   const next = document.querySelector('[aria-label="Next featured project"]');
   const previous = document.querySelector('[aria-label="Previous featured project"]');
-  assert.equal(title(), 'Learnova');
-  await click(next); assert.equal(title(), 'Vatsalya Boutique');
-  await click(previous); assert.equal(title(), 'Learnova');
-  await click(previous); assert.equal(title(), 'Sphere');
-  await click(next); assert.equal(title(), 'Learnova');
+  assert.equal(title(), 'Pallora');
+  await click(next); assert.equal(title(), 'Vastu Shikhar');
+  await click(previous); assert.equal(title(), 'Pallora');
+  await click(previous); assert.equal(title(), 'AllCloths');
+  await click(next); assert.equal(title(), 'Pallora');
   check('3D project carousel next, previous, and wraparound work', () => assert.equal(document.querySelectorAll('.stage-screen:not([inert])').length, 1));
-  await key(next, 'ArrowRight'); assert.equal(title(), 'Vatsalya Boutique');
+  await key(next, 'ArrowRight'); assert.equal(title(), 'Vastu Shikhar');
   await key(next, 'ArrowLeft');
-  check('keyboard project switching works', () => assert.equal(title(), 'Learnova'));
+  check('keyboard project switching works', () => assert.equal(title(), 'Pallora'));
   stage.getBoundingClientRect = () => ({ left: 0, top: 0, width: 600, height: 300, bottom: 300, right: 600 });
   await act(async () => { stage.dispatchEvent(pointer('pointermove', 480, 60)); await new Promise(done => setTimeout(done, 35)); });
   check('pointer movement changes the 3D perspective', () => assert.notEqual(stage.style.getPropertyValue('--stage-y'), '0deg'));
   await act(async () => { stage.dispatchEvent(pointer('pointerdown', 250, 100, 'touch')); stage.dispatchEvent(pointer('pointerup', 120, 100, 'touch')); });
-  check('touch swipe switches the featured project', () => assert.equal(title(), 'Vatsalya Boutique'));
+  check('touch swipe switches the featured project', () => assert.equal(title(), 'Vastu Shikhar'));
   await act(async () => { reducedMotion = true; motionListeners.forEach(listener => listener()); });
   check('reduced motion removes pointer and scroll rotation', () => { assert.equal(stage.style.getPropertyValue('--stage-y'), '0deg'); assert.equal(stage.style.getPropertyValue('--scroll-depth'), '0deg'); });
   const menu = document.querySelector('.menu-toggle');
@@ -105,3 +110,4 @@ try {
   await server.close();
   dom.window.close();
 }
+
