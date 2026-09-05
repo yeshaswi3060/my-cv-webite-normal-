@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Preloader from './components/Preloader';
 import { Analytics } from "@vercel/analytics/react"
 import './styles/main.css';
 import './styles/portfolio.css';
@@ -24,6 +25,7 @@ function App() {
   return (
     <Router>
       <Analytics />
+      <Preloader>
       <Navbar />
       <Suspense fallback={<main id="main-content" className="route-loading" aria-live="polite">Opening project…</main>}>
       <Routes>
@@ -35,6 +37,7 @@ function App() {
       </Routes>
       </Suspense>
       <Footer />
+      </Preloader>
     </Router>
   );
 }

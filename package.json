@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "node scripts/verify.mjs"
+    "test": "node scripts/verify.mjs && node scripts/verify-preloader.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.1",
