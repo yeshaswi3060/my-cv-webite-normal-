@@ -18,7 +18,7 @@ npm test
 - A monochrome editorial system with blue details and a contrasting work section.
 - All original CV sections, nine qualification entries, six linked certificate images, and contact details.
 - Responsive navigation with Escape handling, a focus loop, reduced-motion support, visible keyboard focus, and print styles.
-- Real project and repository links reviewed from the public `yeshaswi3060` GitHub profile. Project visuals are illustrative interface compositions, not captured screenshots. Vatsalya photography comes from that repository.
+- Real project and repository links reviewed from the public `yeshaswi3060` GitHub profile. Project visuals are illustrative interface compositions, not captured screenshots. The four featured websites were supplied directly by Yeshaswi: Pallora, Vastu Shikhar, Malyam, and AllCloths. Existing campaign/brand images from the first three sites are used in the previews; AllCloths uses a typographic cover. Its homepage returned HTTP 429 during review, so its description does not claim unverified features.
 
 ## Verification
 
@@ -35,3 +35,4 @@ Local baseline snapshots, before/after logs, hashes, source diff, source archive
 ## Hosting
 
 The project retains its Vercel configuration. `.openai/hosting.json` identifies a separate private Sites preview; creating that preview does not replace the existing Vercel website.
+
