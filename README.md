@@ -22,6 +22,12 @@ npm test
 
 ## Verification
 
+### Signature introduction
+
+The homepage now opens with a graphite, dimensional YS monogram, an animated line signature, and a split-curtain reveal. The requested five-second entrance holds for 4.3 seconds and reveals over 0.7 seconds. Skip or Escape releases it earlier. It plays once per browser-tab session; `/?intro=replay` replays it for review. Direct section links, other routes, and reduced-motion preferences bypass it. Failed or stalled assets never extend the five-second limit.
+
+The preloader lifecycle suite also checks keyboard focus, scroll restoration, StrictMode, storage failures, asset errors, and back-forward cache restoration.
+
 `npm test` runs component-level DOM tests with jsdom. It covers carousel behavior, pointer and swipe input, keyboard navigation, reduced motion, menu behavior, links and local assets, and both clipboard outcomes. These are not browser-layout or visual-regression tests.
 
 Portfolio lint: `npx eslint src/App.jsx src/components src/pages/Home.jsx`.
