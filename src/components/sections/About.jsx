@@ -1,24 +1,22 @@
-const About = () => {
-    return (
-        <section id="about" className="section about-section">
-            <div className="container">
-                <div className="section-header">
-                    <h2 className="section-title">About Me</h2>
-                    <div className="section-line"></div>
-                </div>
-                <div className="about-content">
-                    <p>
-                        I am a dedicated <strong>Full-Stack Web Developer</strong> and <strong>Cyber Security Researcher</strong>. 
-                        My journey involves building scalable, dynamic web applications while simultaneously identifying complex security flaws through deep-dive penetration testing. 
-                        With a strong foundation in modern frameworks like React and Node.js alongside offensive security expertise, I bridge the gap between robust software development and uncompromising security protocols.
-                    </p>
-                    <p>
-                        By combining my offensive security mindset with full-stack engineering, I craft digital experiences that are not only high-performing and beautifully designed, but inherently <strong>secure by design</strong>.
-                    </p>
-                </div>
-            </div>
-        </section>
-    );
-};
+import { ArrowUpRight, Code2, Fingerprint, Sparkles } from 'lucide-react';
+export default function About() {
+  return <section id="about" className="section about-section">
+    <div className="container">
+      <p className="section-kicker reveal"><span>02</span> BEHIND THE CODE</p>
+      <div className="about-layout">
+        <div className="about-photo-wrap reveal">
+          <div className="about-photo"><img src="/profile-image.jpg" alt="Yeshaswi playing guitar in a garden surrounded by mountains" loading="lazy" width="960" height="960" /><div className="photo-caption"><span>MORE THAN A TERMINAL.</span><span>Always curious. ↗</span></div></div>
+          <div className="photo-footnote"><span>YESHASWI SINGH</span><span>DELHI, INDIA</span></div>
+        </div>
+        <div className="about-story reveal">
+          <h2>A builder’s curiosity.<br /><em>A defender’s instinct.</em></h2>
+          <p>I’m Yeshaswi, a <strong>full-stack developer and cybersecurity researcher</strong>. I enjoy connecting the dots between how something looks, how it works, and how it can work better.</p>
+          <p>From responsive React interfaces to backend systems and security research, I bring an end-to-end perspective. My approach is simple: understand the problem, question the assumptions, and build with intention.</p>
+          <div className="about-principles"><span><Code2 size={17} /> Build thoughtfully</span><span><Fingerprint size={17} /> Think securely</span><span><Sparkles size={17} /> Refine relentlessly</span></div>
+          <a href="#experience" className="text-link">The journey so far <ArrowUpRight size={17} /></a>
+        </div>
+      </div>
+    </div>
+  </section>;
+}
 
-export default About;
