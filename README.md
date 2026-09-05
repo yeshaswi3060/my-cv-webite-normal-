@@ -24,7 +24,7 @@ npm test
 
 ### Signature introduction
 
-The homepage now opens with a graphite, dimensional YS monogram, an animated line signature, and a split-curtain reveal. The requested five-second entrance holds for 4.3 seconds and reveals over 0.7 seconds. Skip or Escape releases it earlier. It plays once per browser-tab session; `/?intro=replay` replays it for review. Direct section links, other routes, and reduced-motion preferences bypass it. Failed or stalled assets never extend the five-second limit.
+The homepage now opens with a graphite, dimensional YS monogram, an animated line signature, and a split-curtain reveal. The requested three-second entrance holds for 2.3 seconds and reveals over 0.7 seconds. Skip or Escape releases it earlier. It plays once per browser-tab session; `/?intro=replay` replays it for review. Direct section links, other routes, and reduced-motion preferences bypass it. Failed or stalled assets never extend the three-second limit.
 
 The preloader lifecycle suite also checks keyboard focus, scroll restoration, StrictMode, storage failures, asset errors, and back-forward cache restoration.
 
