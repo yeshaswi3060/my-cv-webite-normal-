@@ -1,46 +1,13 @@
-const Experience = () => {
-    return (
-        <section id="experience" className="section experience-section">
-            <div className="container">
-                <div className="section-header">
-                    <h2 className="section-title">Experience</h2>
-                    <div className="section-line"></div>
-                </div>
+import { ArrowUpRight } from 'lucide-react';
+const jobs = [
+  { year: '2025', role: 'Web Developer Intern', company: 'Gully Classes Foundation', category: 'DEVELOPMENT', text: 'Developed responsive web pages and managed content flow using modern HTML and CSS, with a focus on improving accessibility.', tags: ['Responsive web', 'Accessibility', 'HTML / CSS'] },
+  { year: '2024', role: 'Cyber Security Researcher', company: 'CrowdStrike', category: 'RESEARCH', text: 'Analyzed malware samples and emerging threat vectors, contributing to proactive defense strategies and endpoint security enhancements.', tags: ['Malware analysis', 'Threat research', 'Endpoint security'] },
+  { year: '2023', role: 'Threat Hunter Intern', company: 'SentinelOne', category: 'SECURITY', text: 'Monitored network traffic for anomalous behavior and assisted with incident response using AI-driven security platforms.', tags: ['Threat hunting', 'Network analysis', 'Incident response'] },
+];
+export default function Experience() {
+  return <section id="experience" className="section experience-section"><div className="container experience-layout">
+    <div className="experience-intro reveal"><p className="section-kicker"><span>04</span> THE JOURNEY</p><h2>Experience<br />that shapes<br /><em>my perspective.</em></h2><p>Building, investigating, and learning along the way.</p><a href="#contact" className="text-link">Let’s work together <ArrowUpRight size={17} /></a></div>
+    <div className="experience-list">{jobs.map(job => <article key={job.year} className="experience-entry reveal"><div className="experience-meta"><span className="experience-year">{job.year}</span><span>{job.category}</span></div><h3>{job.role}</h3><p className="experience-company">{job.company}</p><p className="experience-description">{job.text}</p><div className="experience-tags">{job.tags.map(tag => <span key={tag}>{tag}</span>)}</div></article>)}</div>
+  </div></section>;
+}
 
-                <div className="timeline">
-                    <div className="timeline-item">
-                        <div className="timeline-date">2025</div>
-                        <div className="timeline-content">
-                            <h3>Web Developer Intern</h3>
-                            <span className="company">Gully Classes Foundation</span>
-                            <p>Developed responsive web pages and managed content flow using modern HTML5/CSS3 techniques, improving
-                                site accessibility.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="timeline">
-                    <div className="timeline-item">
-                        <div className="timeline-date">2024</div>
-                        <div className="timeline-content">
-                            <h3>Cyber Security Researcher</h3>
-                            <span className="company">CrowdStrike</span>
-                            <p>Analyzed malware samples and identified emerging threat vectors, contributing to the development of proactive defense strategies and endpoint security enhancements.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="timeline">
-                    <div className="timeline-item">
-                        <div className="timeline-date">2023</div>
-                        <div className="timeline-content">
-                            <h3>Threat Hunter Intern</h3>
-                            <span className="company">SentinelOne</span>
-                            <p>Monitored network traffic for anomalous behavior and assisted in incident response procedures, leveraging AI-driven platforms to neutralize potential security breaches.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-};
-
-export default Experience;

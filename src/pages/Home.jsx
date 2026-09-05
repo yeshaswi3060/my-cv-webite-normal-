@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
 import Skills from '../components/sections/Skills';
@@ -7,68 +7,39 @@ import Experience from '../components/sections/Experience';
 import Projects from '../components/sections/Projects';
 import Contact from '../components/sections/Contact';
 
-const Home = () => {
-    useEffect(() => {
-        // Scroll Animations (Reveal on Scroll)
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Elements to animate
-        const animatedElements = document.querySelectorAll(
-            '.section-title, .about-content, .skill-category, .timeline-item, .project-card, .contact-wrapper, .certification-card'
-        );
-
-        animatedElements.forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        // Add CSS for active state
-        const style = document.createElement('style');
-        style.innerHTML = `
-      .section-title.active, 
-      .about-content.active, 
-      .skill-category.active, 
-      .timeline-item.active, 
-      .project-card.active, 
-      .contact-wrapper.active,
-      .certification-card.active {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
+export default function Home() {
+  const progressRef = useRef(null);
+  useEffect(() => {
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let observer;
+    const elements = [...document.querySelectorAll('.reveal')];
+    function setupReveal() {
+      observer?.disconnect();
+      if (motion.matches || !('IntersectionObserver' in window)) {
+        elements.forEach(element => element.classList.add('revealed')); return;
       }
-    `;
-        document.head.appendChild(style);
+      observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('revealed'); observer.unobserve(entry.target); }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+      elements.forEach(element => { element.classList.add('reveal-ready'); observer.observe(element); });
+    }
+    setupReveal(); motion.addEventListener('change', setupReveal);
+    let frame = 0;
+    const update = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const height = document.documentElement.scrollHeight - window.innerHeight;
+        progressRef.current?.style.setProperty('--progress', height > 0 ? String(window.scrollY / height) : '0');
+      });
+    };
+    window.addEventListener('scroll', update, { passive: true }); window.addEventListener('resize', update); update();
+    return () => { observer?.disconnect(); motion.removeEventListener('change', setupReveal); window.removeEventListener('scroll', update); window.removeEventListener('resize', update); cancelAnimationFrame(frame); };
+  }, []);
+  return <main id="main-content" tabIndex={-1}>
+    <div className="reading-progress" aria-hidden="true" ref={progressRef} />
+    <Hero /><Projects /><About /><Skills /><Experience /><Certifications /><Contact />
+  </main>;
+}
 
-        return () => {
-            observer.disconnect();
-            style.remove();
-        };
-    }, []);
-
-    return (
-        <main>
-            <Hero />
-            <About />
-            <Skills />
-            <Certifications />
-            <Experience />
-            <Projects />
-            <Contact />
-        </main>
-    );
-};
-
-export default Home;
