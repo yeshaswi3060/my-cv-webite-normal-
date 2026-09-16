@@ -52,10 +52,10 @@ try {
     assert.equal(new Set(ids).size, ids.length);
     for (const link of document.querySelectorAll('a[href^="#"]')) assert.ok(document.querySelector(link.getAttribute('href')), link.outerHTML);
   });
-  check('all local images and six certificate links exist', () => {
+  check('all local images exist and credentials are not certificate links', () => {
     for (const image of document.querySelectorAll('img[src^="/"]')) assert.ok(existsSync(resolve('public', image.getAttribute('src').slice(1))));
     assert.equal(document.querySelectorAll('.credential').length, 6);
-    for (const link of document.querySelectorAll('.credential')) assert.ok(existsSync(resolve('public', decodeURIComponent(link.getAttribute('href').slice(1)))));
+    assert.equal(document.querySelectorAll('a.credential, .credential-link').length, 0);
   });
   check('project links point to reviewed GitHub repositories', () => {
     const expected = ['UPSC', 'Sphere', 'clothing-web-vatsalya', 'web-data-scraper', 'Advanced-wifi-scaner', 'Search-Engine'];

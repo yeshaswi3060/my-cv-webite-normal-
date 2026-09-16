@@ -195,7 +195,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline:2px solid v
 .credential-mark.meta-mark { font-size:27px; color:#a4b8ff; }
 .credential h3 { font-weight:450; font-size:1rem; letter-spacing:-.025em; line-height:1.5; max-width:270px; }
 .credential>p { color:#919baa; font-size:.75rem; margin:10px 0 25px; line-height:1.7; }
-.credential-link { margin-top:auto; display:flex; align-items:center; justify-content:space-between; font-size:.75rem; color:#bbc6df; padding-top:17px; border-top:1px solid #2f3540; }
 .more-credentials { margin-top:25px; border-top:1px solid #323741; border-bottom:1px solid #323741; }
 .more-credentials summary { display:flex; justify-content:space-between; align-items:center; gap:20px; cursor:pointer; padding:22px 0; list-style:none; }
 .more-credentials summary::-webkit-details-marker { display:none; }
@@ -293,7 +292,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline:2px solid v
   .experience-layout { grid-template-columns:1fr; gap:35px; }.experience-intro { position:static; }.experience-intro>p:not(.section-kicker) { max-width:300px; }
   .experience-entry { padding:27px 0 29px 22px; }.experience-entry h3 { font-size:1.35rem; }.experience-meta { font-size:.625rem; }.experience-description { font-size:1rem; }
   .credentials-grid { grid-template-columns:1fr; gap:14px; }.credential { padding:24px; }.credential-top { margin-bottom:20px; }.credential h3 { font-size:1.0625rem; max-width:300px; }
-  .credential>p { font-size:.8125rem; }.credential-link { font-size:.8125rem; }.additional-credentials { grid-template-columns:1fr; gap:21px; }
+  .credential>p { font-size:.8125rem; }.additional-credentials { grid-template-columns:1fr; gap:21px; }
   .more-credentials summary>span { font-size:.8125rem; line-height:1.6; gap:9px; }.more-credentials summary>span>svg { display:none; }
   .contact-section { padding-top:65px; }.contact-panel { padding:29px 25px 25px; }.contact-top { flex-wrap:wrap; gap:16px; margin-bottom:33px; }
   .contact-top .section-kicker { font-size:.625rem; }.contact-availability { font-size:.6875rem; }.contact-panel h2 { font-size:2.45rem; line-height:1.14; }
@@ -335,7 +334,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible { outline:2px solid v
 .experience-meta,.experience-tags>span,.credential-top>span:last-child,
 .footer-bottom,.footer-bottom>span { font-size:.75rem; }
 .work-card .tech-tags>span,.expertise-card .tech-tags>span { font-size:.75rem; }
-.footer-links>a,.contact-bottom,.hero-availability,.credential-link,.credential>p,
+.footer-links>a,.contact-bottom,.hero-availability,.credential>p,
 .project-source { font-size:.875rem; }
 .footer-links { flex-wrap:wrap; gap:14px 22px; }
 .stage-buttons button,.copy-email { min-width:44px; min-height:44px; }
